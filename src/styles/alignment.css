@@ -1,0 +1,194 @@
+
+/* #region Text alignment */
+
+.h-leftText{
+  text-align: left;
+}
+
+.h-centerText{
+  text-align: center;
+}
+
+.h-rightText{
+  text-align: right;
+}
+
+.v-topText{
+  vertical-align: top;
+}
+
+.v-centerText{
+  vertical-align: middle;
+}
+
+.v-bottomText{
+  vertical-align: bottom;
+}
+
+/* #endregion */
+
+/* #region Box alignment */
+
+.align{
+  display: flex;
+  display: flexbox;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  /* width: auto; */
+}
+
+.align-inline{
+  display: inline-flex;
+  display: inline-flexbox;
+  display: -ms-inline-flex;
+  display: -webkit-inline-flex;
+  /* width: auto; */
+}
+
+/* Horizontally Left */
+
+.align.h-l_v-t,
+.align-inline.h-l_v-t{
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.align.self.h-l_v-t,
+.align-inline.self.h-l_v-t{
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.align.h-l_v-c,
+.align-inline.h-l_v-c{
+  justify-content: flex-start;
+  align-items: center;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+}
+
+.align.self.h-l_v-c,
+.align-inline.self.h-l_v-c{
+  justify-self: flex-start;
+  align-self: center;
+}
+
+.align.h-l_v-b,
+.align-inline.h-l_v-b{
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.align.self.h-l_v-b,
+.align-inline.self.h-l_v-b{
+  justify-self: flex-start;
+  align-self: flex-end;
+}
+
+/* Horizontally Centre */
+
+.align.h-c_v-t,
+.align-inline.h-c_v-t{
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.align.self.h-c_v-t,
+.align-inline.self.h-c_v-t{
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.align.h-c_v-c,
+.align-inline.h-c_v-c{
+  justify-content: center;
+  align-items: center;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+}
+
+.align.self.h-c_v-c,
+.align-inline.self.h-c_v-c{
+  justify-self: center;
+  align-self: center;
+}
+
+.align.h-c_v-b,
+.align-inline.h-c_v-b{
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.align.self.h-c_v-b,
+.align-inline.self.h-c_v-b{
+  justify-self: center;
+  align-self: flex-end;
+}
+
+/* Horizontally Right */
+
+.align.h-r_v-t,
+.align-inline.h-r_v-t{
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.align.self.h-r_v-t,
+.align-inline.self.h-r_v-t{
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+
+.align.h-r_v-c,
+.align-inline.h-r_v-c{
+  justify-content: flex-end;
+  align-items: center;
+  -moz-box-align: center;
+}
+
+.align.self.h-r_v-c,
+.align-inline.self.h-r_v-c{
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.align.h-r_v-b,
+.align-inline.h-r_v-b{
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.align.self.h-r_v-b,
+.align-inline.self.h-r_v-b{
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+/* Horizontally Wide */
+
+.align.h-w_v-t,
+.align-inline.h-w_v-t{
+  justify-content: stretch;
+  align-items: flex-start;
+}
+
+.align.h-w_v-c,
+.align-inline.h-w_v-c{
+  justify-content: stretch;
+  align-items: center;
+  -moz-box-align: center;
+}
+
+.align.h-w_v-b,
+.align-inline.h-w_v-b{
+  justify-content: stretch;
+  align-items: flex-end;
+}
+
+.align.h-w_v-w,
+.align-inline.h-w_v-w{
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+/* #endregion */

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path
+    class="outer_arc"
+    d="M 11.980469,2 C 6.4652504,2.0107718 1.9999895,6.4847709 2,12 c 0,5.522847 4.4771525,10 10,10 4.23753,-5.4e-5 8.014948,-2.670932 9.427734,-6.666016"/>
+  <path
+    class="inner_arc"
+    d="M 11.021484,6.0507812 C 8.1676722,6.5681581 6.0924835,9.052794 6.0917969,11.953125 c 0,3.313709 2.6862916,6 6.0000001,6 1.423026,4.54e-4 2.799893,-0.504881 3.884765,-1.425781"/>
+  <path
+    class="centre_dot"
+    d="m 14,12 a 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 2,2 0 0 1 2,2"/>
+    <!-- style="display:inline;opacity:0.995341;fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" -->
+</svg>

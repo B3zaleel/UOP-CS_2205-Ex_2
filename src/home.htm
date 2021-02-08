@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Nagatos Notes</title>
+  <link rel="stylesheet" href="./styles/alignment.css"/>
+  <link rel="stylesheet" href="./styles/app.css"/>
+  <link rel="stylesheet" href="./libs/perfect-scrollbar/perfect-scrollbar.css"/>
+  <link rel="icon" href="./images/logo.svg"/>
+</head>
+<body>
+  <header>
+    <div class="align h-l_v-c">
+      <a class="align h-l_v-c home-link" href="home.htm">
+        <img src="./images/logo.png"/>
+        <span>
+          Nagatos Notes
+        </span>
+      </a>
+    </div>
+
+    <div class="align h-r_v-c">
+      <a class="cta-btn">
+        Sign Up
+      </a>
+      <button class="menu-btn" onclick="toggleNavBar()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div>
+    <div>
+      <nav class="min" id="navBar">
+        <ul>
+          <li class="close-nav-btn align h-r_v-c">
+            <button onclick="closeNavBar()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              </svg>
+            </button>
+          </li>
+          <li class="cta-btn align h-c_v-c">
+            <a>
+              Sign Up
+            </a>
+          </li>
+          <li>
+            <a class="selected" href="home.htm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
+
+              <span>
+                Home
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="deselected" href="booksLibrary.htm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+              </svg>
+
+              <span>
+                Book Library
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="deselected" href="contact.htm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M21 8V7l-3 2-3-2v1l3 2 3-2zm1-5H2C.9 3 0 3.9 0 5v14c0 1.1.9 2 2 2h20c1.1 0 1.99-.9 1.99-2L24 5c0-1.1-.9-2-2-2zM8 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H2v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1zm8-6h-8V6h8v6z"/>
+              </svg>
+
+              <span>
+                Contact
+              </span>
+            </a>
+          </li>
+          </li>
+          <li>
+            <a class="deselected" href="about.htm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+
+              <span>
+                About
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="scroll-view">
+        <section>
+          <!-- <img/> -->
+          <p>
+            This is the homepage
+          </p>
+
+          <div>
+            <b>
+              Get
+            </b>
+            <span>
+              Join my mailing list to receive, and more.
+            </span>
+            <div>
+              <input placeholder="Enter your email address." type="email"/>
+              <button>
+                Sign up now
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <hr/>
+    <footer>
+      <div class="align h-c_v-c">
+        <a href="about.htm">
+          About
+        </a>
+        <a href="contact.htm">
+          Contact
+        </a>
+      </div>
+      <div id="copyright" class="align h-c_v-c">
+        &copy;
+      </div>
+    </footer>
+  </div>
+
+  <script src="./libs/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

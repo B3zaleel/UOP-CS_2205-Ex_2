@@ -1,0 +1,356 @@
+html{
+  --primarySiteColor: rgb(240, 191, 250);
+  --secondarySiteColor: rgb(206, 42, 239);
+  --lightSecondarySiteColor: rgb(158, 73, 243);
+  --primaryGrayColor: rgb(171, 171, 171);
+  --secondaryGrayColor: rgb(108, 108, 108);
+  --shadowGrayColor: rgba(192, 192, 192, 0.827);
+  --darkShadowGrayColor: rgba(104, 104, 104, 0.827);
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  font-family: Arial, sans-serif;
+}
+
+.inactive-f{
+  display: none;
+}
+
+.active-f{
+  display: flex;
+}
+
+*::selection{
+  color: white;
+  background: var(--secondarySiteColor);
+}
+
+/* #region Header */
+body > header{
+  display: grid;
+  position: fixed;
+  width: calc(100% - 2 * 15px);
+  height: 40px;
+  top: 0;
+  padding: 0px 15px;
+  background: white;
+  box-shadow: 0px 1.25px 0px 1.5px var(--shadowGrayColor);
+  z-index: 50;
+  grid-auto-flow: column;
+}
+
+body > header .menu-btn{
+  border: 1px solid black;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+  background: var(--primaryGrayColor);
+}
+
+body > header .menu-btn:hover{
+  background: var(--secondaryGrayColor);
+}
+
+body > header .menu-btn:active{
+  padding: 0px;
+  width: 26px;
+  height: 26px;
+  transform: translateY(2px), translateX(2px);
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+body > header .home-link{
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body > header .home-link > img{
+  height: 30px;
+  object-fit: scale-down;
+  fill: blue;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+body > header .home-link > img:hover{
+  background: lightgray;
+}
+
+body > header > div:last-child{
+  justify-items: flex-end;
+}
+
+body > header > div:last-child > a.cta-btn{
+  margin-right: 10px;
+}
+
+body > header > div:last-child > a.cta-btn:active{
+  padding: 2.5px;
+  margin: 2.5px 12.5px;
+}
+/* #endregion */
+
+body > div{
+  display: flex;
+  flex-flow: column;
+  height: calc(100% - 40px);
+  margin-top: 40px;
+  overflow: auto;
+}
+
+body > div > div:first-child{
+  display: grid;
+  grid-template-columns: 50px calc(100% - 50px);
+  min-height: calc(100% - 60px - 12px);
+}
+
+/* #region Navigation bar */
+body > div > div:first-child > nav{
+  position: static;
+  background: white;
+  box-shadow: 1.25px 0px 1.5px 0px var(--shadowGrayColor);
+  min-height: calc(100% - 60px - 12px);
+  z-index: 20;
+  overflow: auto;
+}
+
+body > div > div:first-child > nav.max{
+  width: max-content;
+}
+
+body > div > div:first-child > nav > ul{
+  padding: 5px 0px;
+  margin: 0;
+  height: calc(100% - 2 * 5px);
+  list-style: none;
+  list-style-type: none;
+}
+
+body > div > div:first-child > nav > ul > li.cta-btn,
+body > div > div:first-child > nav > ul > li.close-nav-btn{
+  display: none;
+}
+
+body > div > div:first-child > nav > ul > li.close-nav-btn{
+  padding: 0 15px;
+}
+body > div > div:first-child > nav > ul > li.close-nav-btn > button{
+  padding: 2px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  fill: red;
+  cursor: pointer;
+  outline: none;
+}
+
+body > div > div:first-child > nav > ul > li.close-nav-btn > button:active{
+  padding: 0px;
+  width: 26px;
+  height: 26px;
+  transform: translateY(2px), translateX(2px);
+  transform-origin: center center;
+  margin: 2px;
+}
+
+body > div > div:first-child > nav > ul > li.cta-btn{
+  height: 45px;
+}
+
+body > header > div:last-child > a.cta-btn,
+body > div > div:first-child > nav > ul > li.cta-btn > a{
+  cursor: pointer;
+  color: black;
+  height: fit-content;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  background: var(--primarySiteColor);
+  border-radius: 4px;
+}
+
+body > header > div:last-child > a.cta-btn:hover,
+body > div > div:first-child > nav > ul > li.cta-btn > a:hover{
+  background: var(--secondarySiteColor);
+  color: white;
+}
+
+body > div > div:first-child > nav > ul > li.cta-btn > a:active{
+  padding: 2.5px;
+  margin: 2.5px;
+}
+
+body > div > div:first-child > nav > ul > li.close-nav-btn > button:hover{
+  background: pink;
+}
+body > div > div:first-child > nav > ul > li > a{
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 5px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+body > div > div:first-child > nav > ul > li > a.selected{
+  background: var(--secondarySiteColor);
+}
+
+body > div > div:first-child > nav > ul > li > a > svg{
+  width: 30px;
+  height: 30px;
+}
+
+body > div > div:first-child > nav.max > ul > li > a{
+  justify-content: flex-start;
+}
+
+body > div > div:first-child > nav.min > ul > li > a > span{
+  display: none;
+}
+
+body > div > div:first-child > nav.min > ul > li > a:hover > span{
+  position: absolute;
+  display: block;
+  left: 55px;
+  margin-top: 11.25px;
+  font-size: 14px;
+  border-radius: 2.5px;
+  padding: 2.5px;
+  background: var(--lightSecondarySiteColor);
+  color: white;
+  box-shadow: 0 0px 2.5px 2.5px var(--shadowGrayColor);
+
+}
+body > div > div:first-child > nav > ul > li > a.deselected:hover{
+  background: var(--primarySiteColor);
+}
+/* #endregion */
+
+@media (max-width: 400px) {
+  body > header .home-link > span,
+  body > header > div:last-child > a.cta-btn{
+    display: none;
+  }
+
+  body > div > div:first-child{
+    grid-template-columns: 100%;
+  }
+
+  body > div > div:first-child > nav{
+    position: absolute;
+    top: 0;
+    z-index: 51;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  body > div > div:first-child > nav.min{
+    display: none;
+  }
+
+  body > div > div:first-child > nav.max{
+    width: 100%;
+  }
+
+  body > div > div:first-child > nav > ul > li.close-nav-btn{
+    display: flex;
+    /* padding: 10px; */
+  }
+  body > div > div:first-child > nav > ul > li.cta-btn{
+    display: flex;
+  }
+
+}
+
+/* body > div > div:first-child > main{
+  padding: 20px;
+} */
+
+.scroll-view{
+  position: relative;
+  overflow: hidden;
+}
+
+/* #region Footer */
+body > div > hr{
+  position: relative;
+  width: calc(100% - 50px);
+  min-height: 2px;
+  border: none;
+  background: lightgrey;
+  margin: 0px 25px 10px 25px;
+}
+
+body > div > footer{
+  position: relative;
+  display: grid;
+  grid-auto-flow: row;
+  width: 100%;
+  min-height: 60px;
+}
+
+body > div > footer > div:first-child > a {
+  margin: 0 5px;
+  color: var(--lightSecondarySiteColor);
+}
+
+body > div > footer > div:first-child > a:hover{
+  color: var(--secondarySiteColor);
+}
+
+
+/* #endregion */
+
+/* #region Loading Icon */
+.loading-icon{
+  stroke: var(--primarySiteColor);
+  fill: none;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  zoom: 1.5;
+}
+
+.loading-icon > path.inner_arc,
+.loading-icon > path.outer_arc{
+  transform-origin: center center;
+  animation-name: arc-anim;
+  animation-timing-function: linear;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+.loading-icon > path.inner_arc{
+  transform: rotate(20deg);
+  animation-duration: 1.6s;
+}
+
+.loading-icon > path.outer_arc{
+  transform: rotate(60deg);
+  animation-duration: 3s;
+}
+
+@keyframes arc-anim{
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+/* #endregion */

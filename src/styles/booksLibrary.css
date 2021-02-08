@@ -1,0 +1,140 @@
+
+.search-pane{
+  position: relative;
+  height: 50px;
+  flex-flow: column;
+  -ms-flex-flow: column;
+}
+
+.search-pane > input{
+  padding: 5px 10px;
+  width: 180px;
+  font-size: 14px;
+  border-radius: 2.5px;
+  border: 1px solid gray;
+  background: lightgray;
+  color: gray;
+  outline: none;
+}
+
+.search-pane > input:focus{
+  background: white;
+  color: black;
+}
+
+.search-pane > .result-menu{
+  display: none;
+  position: absolute;
+  width: 200px;
+  top: 45px;
+  padding: 5px 0;
+  z-index: 5;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px rgb(193, 193, 193);
+}
+
+.search-pane > .result-menu.loading{
+  display: flex;
+}
+
+.search-pane > .result-menu.loading > .items-list{
+  display: none;
+}
+
+.search-pane > .result-menu.loading > .loading-pane{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
+
+.books-list{
+  padding: 10px;
+  background: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 3px inset var(--darkShadowGrayColor);
+}
+
+.book{
+  display: inline-block;
+  flex-flow: column;
+  width: 200px;
+  height: 210px;
+  background: white;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 1.5px 1.5px var(--darkShadowGrayColor);
+}
+
+.book > .face-1{
+  flex-flow: column;
+}
+
+.book > .face-1 > img{
+  max-height: 180px;
+  object-fit: scale-down;
+}
+
+.book > .face-1 > b{
+  display: block;
+  margin-top: 10px;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.book > .face-2{
+  flex-flow: column;
+  display: none;
+}
+
+.book > .face-2 > *{
+  margin: 5px 0px;
+}
+
+.book > .face-2 > span{
+  display: block;
+  width: 100%;
+}
+
+.book.flipped > .face-2{
+  animation-name: flip-anim;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+@keyframes flip-anim{
+  from{
+    transform: rotateY(-180deg);
+  }
+  to{
+    transform: rotateY(0deg);
+  }
+}
+
+.book.flipped {
+  background: var(--shadowGrayColor);
+}
+
+.book.flipped > .face-1{
+  display: none;
+}
+
+.book.flipped > .face-2{
+  display: flex;
+}
+
+/* #region Nav */
+.nav-pane{
+  height: 50px;
+}
+
+.nav-pane > span{
+  padding: 5px 10px;
+}
