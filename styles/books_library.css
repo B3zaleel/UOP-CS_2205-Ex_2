@@ -68,6 +68,7 @@
   border: 2px solid gray;
   border-radius: 10px;
   padding: 10px;
+  margin: 5px;
   box-shadow: 0px 0px 1.5px 1.5px var(--darkShadowGrayColor);
 }
 
@@ -91,12 +92,16 @@
 }
 
 .book > .face-2{
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
   flex-flow: column;
   display: none;
+  justify-items: center;
 }
 
 .book > .face-2 > *{
   margin: 5px 0px;
+  width: fit-content;
 }
 
 .book > .face-2 > span{
@@ -122,7 +127,7 @@
 }
 
 .book.flipped {
-  background: var(--shadowGrayColor);
+  background: lavender;
 }
 
 .book.flipped > .face-1{
@@ -130,7 +135,7 @@
 }
 
 .book.flipped > .face-2{
-  display: flex;
+  display: grid;
 }
 
 /* #region Nav */

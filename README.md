@@ -6,6 +6,9 @@ URL: https://b3zaleel.github.io/UOP-CS_2205-Ex_2/index.html
 ## Pages Done
 
 + index.html (needs some additions)
++ explore.html
++ posts/blog_post1.html
++ books_library.html
 + about.html
 + contact.html
 + terms_of_use.html

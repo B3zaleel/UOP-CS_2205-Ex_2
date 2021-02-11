@@ -90,18 +90,21 @@
 /* #endregion */
 
 /* #region topic link */
+.block.category > div:last-child > .list,
 .block.topic > div:last-child > .list{
   display: grid;
   grid-auto-flow: column;
   column-gap: 10px;
   padding: 10px;
   opacity: 0.8;
+  grid-auto-columns: max-content;
 }
 
+.block.category > div:last-child > .list > a,
 .block.topic > div:last-child > .list > a{
   display: grid;
   grid-auto-flow: row;
-  grid-template-rows: calc(100% - 25px) 25px;
+  grid-template-rows: calc(100% - 20px) 20px;
   border-radius: 2.5px;
   height: 90px;
   width: 90px;
@@ -111,19 +114,40 @@
   text-decoration: none;
   outline: none;
   cursor: pointer;
+  align-items: center;
+  justify-items: center;
 }
 
+.block.category > div:last-child > .list > a.unavailable,
+.block.topic > div:last-child > .list > a.unavailable{
+  grid-template-rows: none;
+  background:  linear-gradient(to top right, var(--primaryGrayColor), var(--secondaryGrayColor));
+}
+
+.block.category > div:last-child > .list > a:hover,
 .block.topic > div:last-child > .list > a:hover{
   background: var(--darkPrimarySiteColor);
 }
 
+.block.category > div:last-child > .list > a > div,
+.block.topic > div:last-child > .list > a > div{
+  width: inherit;
+}
+
 .block.topic > div:last-child > .list > a > div:first-child > svg{
-  width: 80%;
-  height: 80%;
+  width: 68px;
+  height: 68px;
+  fill: none;
+  stroke: black;
+}
+.block.category > div:last-child > .list > a > div:first-child > svg{
+  width: 75px;
+  height: 75px;
   fill: none;
   stroke: black;
 }
 
+.block.category > div:last-child > .list > a > div:last-child > .title,
 .block.topic > div:last-child > .list > a > div:last-child > .title{
   display: block;
   font-size: 10pt;

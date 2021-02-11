@@ -505,6 +505,7 @@ button.default{
   min-width: 34px;
   outline: none;
   background: lightgray;
+  color: black;
   border: 1px solid gray;
   cursor: pointer;
 }
@@ -533,7 +534,7 @@ b.h2{
   font-size: 22px;
 }
 a.default{
-  display: inline-block;
+  display: inline-flex;
   border-radius: 15px;
   text-decoration: none;
   outline: none;
