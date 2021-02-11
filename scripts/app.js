@@ -9,6 +9,7 @@ const cancelEvent = ev=>{
 //#region Navigation Bar
 const toggleNavBar = ()=> {
   const navBar = document.getElementById('navBar');
+  closeSignUpForm();
   if (navBar.classList.contains('max')) {
     navBar.classList.replace('max', 'min');
   } else {
@@ -42,7 +43,6 @@ const closeSignUpForm = ()=> {
 const signUp = ()=>{
   const signUpForm = document.getElementById('sign-up-pane');
   const emailInput = signUpForm.getElementsByTagName('input')[0];
-  console.log(emailInput.validity);
   if (emailInput.validity.valid && emailInput.value.trim().length > 0) {
     closeSignUpForm();
     openSnackBar('Thank you for signing up.');
