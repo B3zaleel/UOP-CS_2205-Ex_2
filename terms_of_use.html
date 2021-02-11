@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use | Nagato Notes</title>
+  <link rel="stylesheet" href="./styles/alignment.css"/>
+  <link rel="stylesheet" href="./styles/fonts.css"/>
+  <link rel="stylesheet" href="./styles/app.css"/>
+  <link rel="stylesheet" href="./styles/books_library.css"/>
+  <link rel="stylesheet" href="./styles/blog_post.css"/>
+  <link rel="stylesheet" href="./libs/perfect-scrollbar/perfect-scrollbar.css"/>
+  <link rel="icon" href="./images/logo.svg"/>
+</head>
+<body>
+  <style>
+    p > b{
+      display: block;
+    }
+  </style>
+  <header>
+    <div class="align h-l_v-c">
+      <a class="align h-l_v-c home-link" href="index.html">
+        <img src="./images/logo.png"/>
+        <span>
+          Nagato Notes
+        </span>
+      </a>
+    </div>
+
+    <div class="align h-r_v-c">
+      <button class="cta-btn" onclick="openSignUpForm(); cancelEvent(event);">
+        Sign Up
+      </button>
+      <button class="menu-btn" onclick="toggleNavBar(); cancelEvent(event);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="sign-up-pane " id="sign-up-pane">
+      <div onclick="cancelEvent(event)">
+        <input placeholder="Enter your email address" type="email"/>
+        <button class="cta-btn" onclick="signUp()">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scroll-view">
+    <div>
+      <nav class="min" id="navBar" onclick="cancelEvent(event)">
+        <ul>
+          <li class="close-nav-btn align h-r_v-c">
+            <button onclick="closeNavBar()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              </svg>
+            </button>
+          </li>
+          <li class="cta-nav-btn align h-c_v-c">
+            <button class="cta-btn" onclick="openSignUpForm()">
+              Sign Up
+            </button>
+          </li>
+          <li>
+            <a class="deselected" href="explore.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z"/>
+              </svg>
+
+              <span>
+                Explore
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="deselected" href="books_library.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+              </svg>
+
+              <span>
+                Book Library
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="deselected" href="contact.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M21 8V7l-3 2-3-2v1l3 2 3-2zm1-5H2C.9 3 0 3.9 0 5v14c0 1.1.9 2 2 2h20c1.1 0 1.99-.9 1.99-2L24 5c0-1.1-.9-2-2-2zM8 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H2v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1zm8-6h-8V6h8v6z"/>
+              </svg>
+
+              <span>
+                Contact
+              </span>
+            </a>
+          </li>
+          </li>
+          <li>
+            <a class="deselected" href="about.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+
+              <span>
+                About
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="scroll-view">
+        <section>
+          <h1>
+            Terms of Use
+          </h1>
+          <p>
+            <b>
+              Effective Date: February 8, 2021
+            </b>
+          </p>
+          <p>
+            Welcome to the Nagato Notes website. The Terms of Use are a legal agreement between you,
+            a user of the site, and Nagato Notes that governs your use of the Site, including all
+            related webpages, and downloadable materials, information, photos, or other documentation
+            that appears on this Site. Your access to this Site is based on your acceptance of the
+            Terms. Please carefully read out Terms of Use and make sure that you agree with all of it
+            before you begin to use the site. IF YOU DO NOT AGREE WITH THESE TERMS, YOU SHOULD
+            NOT ACCESS OR USE THE SITE OR SIGN UP FOR THE WEEKLY UPDATES.
+          </p>
+
+          <p>
+            <b>
+              1. User Discussion policy
+            </b>
+            This Site maintains a User Discussion section to provide a forum for sharing opinions and
+            information regarding the material posted on the Site. All statements, photos, videos,
+            materials, or other User Content posted by contributors reflects the views of the
+            individual contributors and does not reflect the views of Nagato Notes. Nagato Notes takes
+            no responsibility and assumes no liability for any User Content posted by you or any third
+            party. You must be subscribe to Nagato Notes Insider to participate in User Discussion
+            sections of the Site.
+            <br/>
+            We encourage respectful, constructive dialogue and reserve the right to remove posts that
+            are offensive, act as advertisements, or attempt to solicit funds. We also may remove
+            identical or substantially similar comments that are posted more than once, including
+            those posted for the purpose of monopolizing the discussion.
+          </p>
+
+          <p>
+            <b>
+              2. Email address submission
+            </b>
+            This Site may allow you the option of providing your email address to us in order to receive
+            certain communications from us, such as occasional updates. Any email that you receive
+            from us will include an unsubscribe link that will allow you to opt-out of receiving future emails.
+          </p>
+
+          <p>
+            <b>
+              3. Permitted distribution
+            </b>
+            You may copy or distribute the materials and Content that appears on the Site only for
+            non-commercial purposes; specifically, your personal research, teaching and learning and
+            other similar purposes regarding educational, health care, environmental, economic,
+            technology, social and political issues. You may not use the Site materials or Content
+            for any commercial purpose or in any manner that disparages or discredits any person. All
+            distributed copies must display the following copyright notice: Copyright Nagato Notes, LLC.
+            Permission to copy or distribute any materials that appear on the Site that are owned or
+            copyrighted by others must be obtained from the third party that owns such content.
+          </p>
+
+          <p>
+            <b>
+              4. Copyright infringement – notification requirements
+            </b>
+            If you believe that your work has been used on our Site in a way that constitutes copyright
+            infringement, you should send written notification thereof, in accordance with the provisions
+            of the Digital Millennium Copyright Act (the “Notification”), to our Designated Copyright
+            Agent, who can be reached as follows:
+            <br/>
+            Email: <a href="mailto:legal@nagatonotes.com">legal@nagatonotes.com</a>
+          </p>
+
+          <p>
+            <b>
+              5. Site availability and support
+            </b>
+            You may access the Site if and when it is available. We do not guarantee availability of
+            the Site or of materials on the Site. The Site may occasionally be down for service,
+            upgrades, or for other reasons. To the maximum extent authorized under applicable law,
+            we reserve the right to change, remove, delete, restrict, block access to, or stop
+            providing any or all of the Site at any time and without notice. We have no obligation
+            to provide support in relation to the Site or Content.
+          </p>
+
+          <p>
+            <b>
+              6. Changes to these Terms
+            </b>
+            We reserve the right to change these Terms at any time, in our sole discretion, upon notice
+            to you. We may give notice by posting updated Terms on the Site, sending you an email, or
+            by any other reasonable means. You should periodically review these Terms for changes and
+            you can review the most current Terms at any time at: <a href="./terms_of_use.html">https.../terms_of_use.html</a>.
+            The updated Terms will govern your use of the Site as of the “Effective Date” date indicated
+            at the top of these Terms. If you do not agree to the updated Terms, you should stop using the
+            Site. Your use of the Site after the updated version of these Terms is posted will constitute your
+            acceptance of the updated Terms.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <hr/>
+    <footer>
+      <div class="align h-c_v-c">
+        <a href="about.html">
+          About
+        </a>
+        <a href="contact.html">
+          Contact
+        </a>
+        <a href="terms_of_use.html">
+          Terms Of Use
+        </a>
+      </div>
+      <div id="copyright" class="align h-c_v-c">
+        &copy;
+      </div>
+    </footer>
+  </div>
+
+  <div class="snack-bar" id="snack-bar"><span></span></div>
+
+  <script src="./libs/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/books_library.js"></script>
+  <script src="scripts/blog_post.js"></script>
+</body>
+</html>

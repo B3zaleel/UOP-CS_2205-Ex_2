@@ -11,10 +11,14 @@ const searchQuery = ev=> {
   }
 };
 
-const hideResultMenu = ev=> {
-  const resultMenu = ev.target.parentElement.getElementsByClassName('result-menu')[0];
+const hideResultMenu = ()=> {
+  const resultMenu = document.getElementById('result-menu');
   resultMenu.classList.remove('loading');
 };
+
+window.addEventListener('click', ()=> {
+  hideResultMenu();
+});
 
 const showResultMenu = ev=> {
   const resultMenu = ev.target.parentElement.getElementsByClassName('result-menu')[0];

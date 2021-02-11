@@ -1,0 +1,90 @@
+
+section.error{
+  display: grid;
+  grid-auto-flow: row;
+  flex-flow: column;
+  grid-template-rows: 60% 40%;
+  min-height: 100%;
+  height: fit-content;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+section.error > div:first-child{
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 10px;
+  align-items: center;
+  background: ghostwhite;
+  height: fit-content;
+  height: 100%;
+}
+
+section.error > div:first-child > p {
+  padding: 20px;
+  margin: 0;
+}
+
+.error-404-text{
+  font-size: 90px;
+  font-weight: 800;
+  margin: 30px 0;
+}
+
+section.error > div:last-child{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 50% 50%;
+  column-gap: 20px;
+  row-gap: 20px;
+  background: lavender;
+  min-height: calc(2 * 60px + 2 * 20px + 20px);
+  height: calc(100% - 2 * 20px);
+  padding: 20px;
+}
+
+section.error > div:last-child > div{
+  width: 40%;
+  height: 60%;
+  min-width: 80px;
+  min-height: 60px;
+  background: black;
+  color: lavender;
+  fill: lavender;
+  border-radius: 15px;
+}
+
+section.error > div:last-child > div:first-child:hover > svg{
+  animation-name: left-right-movement-anim;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+@keyframes left-right-movement-anim{
+  from{
+    transform: translateX(-5px);
+  } to {
+    transform: translateX(5px);
+  }
+}
+
+@media (max-width: 500px){
+  section.error > div:last-child{
+    grid-auto-flow: row;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: none;
+    min-height: calc(2 * 60px + 2 * 20px + 20px);
+  }
+
+  section.error > div:last-child > div{
+    width: 55%;
+    height: 45%;
+    border-radius: 10px;
+  }
+
+}

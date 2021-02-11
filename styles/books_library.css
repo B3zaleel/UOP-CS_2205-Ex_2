@@ -4,6 +4,7 @@
   height: 50px;
   flex-flow: column;
   -ms-flex-flow: column;
+  outline: none;
 }
 
 .search-pane > input{
@@ -32,6 +33,7 @@
   background: white;
   border-radius: 4px;
   box-shadow: 0 0 4px 1px rgb(193, 193, 193);
+  outline: none;
 }
 
 .search-pane > .result-menu.loading{
@@ -108,6 +110,7 @@
   animation-play-state: running;
   animation-duration: 1s;
   animation-timing-function: linear;
+  transform-style: preserve-3d;
 }
 @keyframes flip-anim{
   from{

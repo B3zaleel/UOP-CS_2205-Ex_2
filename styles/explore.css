@@ -1,0 +1,137 @@
+
+.block{
+  display: grid;
+  position: relative;
+  grid-template-rows: 35px calc(2 * 60px + 10px);
+  align-items: center;
+  margin: 10px 0;
+}
+
+.block.dark-bg{
+  background: var(--secondarySiteColor);
+}
+
+.block.light-bg{
+  background: var(--primarySiteColor);
+}
+
+.block > h3{
+  margin: 0;
+  padding: 10px;
+}
+
+.block > div:last-child{
+  position: relative;
+  height: calc(100% - 10px);
+  border-radius: 5px;
+  margin: 0px 10px 10px 10px;
+  background: lavender;
+  box-shadow: 0 0 2px 2px var(--darkShadowGrayColor);
+}
+
+
+/* #region post link */
+.block.post > div:last-child > .list{
+  display: grid;
+  grid-auto-flow: column;
+  row-gap: 10px;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.block.post > div:last-child > .list > a{
+  display: grid;
+  grid-template-columns: 50px calc(100% - 50px);
+  border-radius: 2.5px;
+  height: 50px;
+  width: 95%;
+  padding: 5px;
+  background: var(--primarySiteColor);
+  color: black;
+  text-decoration: none;
+  outline: none;
+}
+
+.block.post > div:last-child > .list > a:hover{
+  background: var(--darkPrimarySiteColor);
+}
+
+.block.post > div:last-child > .list > a > div{
+  height: 100%;
+}
+
+.block.post > div:last-child > .list > a > div:first-child > svg{
+  width: 45px;
+  height: 45px;
+}
+
+.block.post > div:last-child > .list > a > div:last-child{
+  display: grid;
+  grid-template-rows: 65% 35%;
+}
+
+.block.post > div:last-child > .list > a > div:last-child > .title{
+  display: block;
+  font-size: 16pt;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.block.post > div:last-child > .list > a > div:last-child > .upload-date{
+  display: block;
+  font-size: 10pt;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* #endregion */
+
+/* #region topic link */
+.block.topic > div:last-child > .list{
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 10px;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.block.topic > div:last-child > .list > a{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: calc(100% - 25px) 25px;
+  border-radius: 2.5px;
+  height: 90px;
+  width: 90px;
+  padding: 5px;
+  background: var(--primarySiteColor);
+  color: black;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.block.topic > div:last-child > .list > a:hover{
+  background: var(--darkPrimarySiteColor);
+}
+
+.block.topic > div:last-child > .list > a > div:first-child > svg{
+  width: 80%;
+  height: 80%;
+  fill: none;
+  stroke: black;
+}
+
+.block.topic > div:last-child > .list > a > div:last-child > .title{
+  display: block;
+  font-size: 10pt;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* #endregion */
+

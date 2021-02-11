@@ -31,7 +31,6 @@
 
 .align{
   display: flex;
-  display: flexbox;
   display: -webkit-flex;
   display: -ms-flexbox;
   /* width: auto; */
@@ -39,7 +38,6 @@
 
 .align-inline{
   display: inline-flex;
-  display: inline-flexbox;
   display: -ms-inline-flex;
   display: -webkit-inline-flex;
   /* width: auto; */

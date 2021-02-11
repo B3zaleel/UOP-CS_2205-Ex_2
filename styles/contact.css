@@ -1,0 +1,67 @@
+
+section.contact{
+  display: flex;
+  flex-flow: row;
+  padding: 0 20px;
+}
+
+section.contact > div{
+  width: 50%;
+  flex-flow: column;
+}
+
+form{
+  display: grid;
+  row-gap: 10px;
+  grid-auto-flow: row;
+  padding: 20px 10px;
+  width: 80%;
+  border-radius: 10px;
+  background: var(--primarySiteColor);
+  box-shadow: 0.8px 0.8px 2px 2px var(--darkShadowGrayColor);
+}
+
+form > div{
+  display: grid;
+  grid-auto-flow: row;
+}
+
+form > div:last-child{
+  display: flex;
+}
+
+form > div input{
+  max-width: 250px;
+}
+
+section.contact > div:last-child{
+  text-align: center;
+  padding: 30px 0;
+}
+
+.split-panel{
+  display: grid;
+  grid-template-columns: 30px calc(100% - 30px);
+}
+
+span.error-msg{
+  color: red;
+  margin-top: 5px;
+  font-size: 10pt;
+}
+
+.sub-headline{
+  display: block;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 540px){
+  section.contact{
+    flex-flow: column;
+  }
+
+  section.contact > div{
+    width: 100%;
+  }
+}

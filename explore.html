@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home &bullet; Nagato Notes</title>
+  <title>Explore &bullet; Nagato Notes</title>
   <link rel="stylesheet" href="./styles/alignment.css"/>
   <link rel="stylesheet" href="./styles/fonts.css"/>
   <link rel="stylesheet" href="./styles/app.css"/>
-  <link rel="stylesheet" href="./styles/home.css"/>
+  <link rel="stylesheet" href="./styles/books_library.css"/>
+  <link rel="stylesheet" href="./styles/blog_post.css"/>
+  <link rel="stylesheet" href="./styles/explore.css"/>
   <link rel="stylesheet" href="./libs/perfect-scrollbar/perfect-scrollbar.css"/>
   <link rel="icon" href="./images/logo.svg"/>
 </head>
 <body class="scroll-view">
   <header>
     <div class="align h-l_v-c">
-      <a class="align h-l_v-c home-link" href="index.html">
+      <a class="align h-l_v-c home-link" href="./index.html">
         <img src="./images/logo.png"/>
         <span>
           Nagato Notes
@@ -66,7 +68,7 @@
             <input class="txt-input" placeholder="Search this Site"/>
           </li>
           <li>
-            <a class="deselected" href="explore.html">
+            <a class="selected" href="./explore.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z"/>
               </svg>
@@ -77,7 +79,7 @@
             </a>
           </li>
           <li>
-            <a class="deselected" href="books_library.html">
+            <a class="deselected" href="./books_library.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
               </svg>
@@ -88,7 +90,7 @@
             </a>
           </li>
           <li>
-            <a class="deselected" href="contact.html">
+            <a class="deselected" href="./contact.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M21 8V7l-3 2-3-2v1l3 2 3-2zm1-5H2C.9 3 0 3.9 0 5v14c0 1.1.9 2 2 2h20c1.1 0 1.99-.9 1.99-2L24 5c0-1.1-.9-2-2-2zM8 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H2v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1zm8-6h-8V6h8v6z"/>
               </svg>
@@ -100,7 +102,7 @@
           </li>
           </li>
           <li>
-            <a class="deselected" href="about.html">
+            <a class="deselected" href="./about.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
               </svg>
@@ -114,51 +116,68 @@
       </nav>
 
       <main class="scroll-view">
-        <section class="home">
-          <div class="board">
-            <h2>
-              HAPPY VALENTINE'S DAY
-            </h2>
-          </div>
-
-          <div class="board split light-bg">
-            <div>
-              <b class="h2">
-                Books to Inspire
-              </b>
-
-              <p>
-                Our selection of non-fiction books are going to get you fired up to build that startup,
-                lose those few extra pounds,
-                overcome your fears, be more productive, develop yourself, and so much more.
-              </p>
-
-              <a class="default dark-bg" href="./explore.html">
-                Discover the books
-              </a>
-              <br/>
-            </div>
-
-            <div>
-              <img src="./images/home/books_inspire.png"/>
-            </div>
-          </div>
-
-          <div class="board light-bg">
+        <section>
+          <div class="block dark-bg post">
             <h3>
-              Get notified when I post NEW content.
+              Recent Posts
             </h3>
-            <span>
-              Join my mailing list to receive book reviews and recommendations,
-              programming and graphics design articles, tips from me, and more.
-            </span>
-            <div>
-              <input class="txt-input" placeholder="Enter your email address." type="email"/>
-              <button class="cta-btn alt" onclick="signUp()">
-                Sign up now
-              </button>
+
+            <div class="scroll-view">
+              <div class="list">
+                <a href="./posts/blog_post_1.html">
+                  <div class="align h-c_v-c">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"/>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <span class="title" aria-label="Post title">
+                      Books every Developer should read
+                    </span>
+                    <span class="upload-date" aria-label="Post upload date" title="Feb 9, 2021">
+                      Uploaded 2 hours ago
+                    </span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
+
+          <div class="block light-bg topic">
+            <h3>
+              Discover Categories
+            </h3>
+
+            <div class="scroll-view">
+              <div class="list">
+                <a>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32">
+                      <g>
+                        <path
+                          d="m 11.99841,22.078127 v -2 c -1.403111,-3.863824 -1.829795,-2.884983 -2.9999997,-7 C 7.8282054,8.9631105 10.257311,6.2365122 16.26998,6.431734 c 6.01267,0.1952218 7.787632,2.7458721 6.72843,6.646393 -1.295353,4.770146 -1.445211,3.626282 -3,7 v 2 z"/>
+                        <path
+                          d="m 13.082395,12.519533 c -0.160805,0.02465 -0.326752,0.127934 -0.484375,0.359375 -0.630493,0.925766 0.40039,1.199219 0.40039,1.199219 h 1 v -1 c 0,0 -0.433602,-0.632529 -0.916015,-0.558594 z m 0.916015,1.558594 v 8 H 9.9984103 v 2 H 13.99841 c 0,0 0.768876,1.502744 2,1.5 1.231124,-0.0027 2,-1.5 2,-1.5 h 4 v -2 h -4 v -8 z m 4,0 h 1 c 0,0 1.07691,-0.288508 0.400391,-1.199219 -0.676519,-0.91071 -1.400391,0.199219 -1.400391,0.199219 z"/>
+                        <path d="m 13.99841,24.078127 h 4"/>
+                      </g>
+                    </svg>
+                  </div>
+
+                  <div class="align h-c_v-c">
+                    <span class="title" aria-label="Category title">
+                      Motivation and Inspiration
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </section>
       </main>
     </div>
@@ -186,5 +205,7 @@
 
   <script src="./libs/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <script src="./scripts/app.js"></script>
+  <script src="./scripts/books_library.js"></script>
+  <script src="./scripts/blog_post.js"></script>
 </body>
 </html>
