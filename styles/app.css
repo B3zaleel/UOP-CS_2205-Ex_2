@@ -338,7 +338,7 @@ body > div > div:first-child > nav > ul > li > a.deselected:hover{
   body > div > div:first-child > nav{
     position: fixed;
     top: 0;
-    z-index: 41;
+    z-index: 61;
     width: 100%;
     box-shadow: none;
   }
