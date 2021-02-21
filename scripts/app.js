@@ -12,8 +12,10 @@ const toggleNavBar = ()=> {
   closeSignUpForm();
   if (navBar.classList.contains('max')) {
     navBar.classList.replace('max', 'min');
+  } else if (navBar.classList.contains('min')) {
+		navBar.classList.replace('min', 'max');
   } else {
-    navBar.classList.replace('min', 'max');
+    navBar.classList.add('min');
   }
 };
 
@@ -37,7 +39,6 @@ const openSignUpForm = ()=> {
 const closeSignUpForm = ()=> {
   const signUpForm = document.getElementById('sign-up-pane');
   signUpForm.style.display = 'none';
-  closeNavBar();
 };
 
 const signUp = ()=>{
